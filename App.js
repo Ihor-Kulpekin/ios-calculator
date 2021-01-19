@@ -10,17 +10,17 @@ export default function App() {
 
   const calculate = (type, value) => {
     if (type === "number") {
-      setResult(`${value}`);
+      setResult(`${result}${value}`);
     }
 
     if (type === "operator") {
       setOperation(value);
       setPrevValue(result);
-      setResult(result);
+      setResult('');
     }
 
     if (type === "clear") {
-      setResult("0");
+      setResult("");
       setOperation(null);
       setPrevValue(null);
     }
